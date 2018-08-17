@@ -8,7 +8,6 @@ import PropTypes from "prop-types";
 
 class BurgerIngredient extends Component {
   render() {
-    return;
     let ingredient = null;
     switch (this.props.type) {
       case "bread-bottom":
@@ -28,11 +27,11 @@ class BurgerIngredient extends Component {
       case "cheese":
         ingredient = <div className={classes.Cheese} />;
         break;
-      case "Salad":
+      case "salad":
         ingredient = <div className={classes.Salad} />;
         break;
       case "bacon":
-        ingredient = <div className={classes.Cheese} />;
+        ingredient = <div className={classes.Bacon} />;
         break;
 
       default:
