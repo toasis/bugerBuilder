@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 // import Aux from "../../hoc/Aux";
+// @ts-ignore
 import classes from "./Layout.css";
 import Toolbar from "../Navigation/Toolbar/Toolbar";
 import SideDrawer from "../Navigation/SideDrawer/SideDrawer";
-import { timingSafeEqual } from "crypto";
 
 class Layout extends Component {
   state = {
@@ -14,10 +14,16 @@ class Layout extends Component {
     this.setState({ showSideDrawer: false });
   };
 
+  toggleSideDrawerHandler = () => {
+    this.setState(prevState => {
+      return { showSideDrawer: !prevState.showSideDrawer };
+    });
+  };
+
   render() {
     return (
       <React.Fragment>
-        <Toolbar />
+        <Toolbar toggleSideDrawer={this.toggleSideDrawerHandler} />
         <SideDrawer
           closed={this.sideDrawerCloseHandler}
           open={this.state.showSideDrawer}
