@@ -1,4 +1,5 @@
 import React from "react";
+// @ts-ignore
 import classes from "./Burger.css";
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
 
@@ -14,6 +15,7 @@ const burger = props => {
     }, []);
   console.log(transformedIngredients);
   if (transformedIngredients.length === 0) {
+    // @ts-ignore
     transformedIngredients = <p>Please start adding ingredients</p>;
   }
   return (

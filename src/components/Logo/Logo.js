@@ -1,4 +1,5 @@
 import React from "react";
+// @ts-ignore
 import burgerLogo from "../../assets/images/burger-logo.png";
 import classes from "./Logo.css";
 const logo = props => {
